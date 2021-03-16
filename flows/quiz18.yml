@@ -1,0 +1,52 @@
+completion_text: |-
+  <p><span style="font-family: &quot;Open Sans&quot;, Arial, sans-serif; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></p>
+description: |-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+groups:
+- id: intro
+  pages:
+  - content: "<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif;\
+      \ text-align: justify;\">Lorem ipsum dolor sit amet, consectetur adipiscing\
+      \ elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut\
+      \ enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\
+      \ ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate\
+      \ velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\
+      \ cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id\
+      \ est laborum.</span><br></p> "
+    id: welcome
+    title: Pregunta 1
+    type: Page
+- id: quiz_start
+  pages:
+  - answers:
+    - "<plain>esta s\xED"
+    id: quizquestion41
+    prompt: ''
+    title: Pregunta 1
+    type: TextQuestion
+    value: 1.0
+  shuffle: true
+rules:
+  access:
+  - permissions:
+    - view
+    - submit_answer
+    - end_session
+    - see_correctness
+    - see_answer_after_submission
+  grade_aggregation_strategy: use_latest
+  grade_identifier: quiz18
+  grading:
+  - credit_percent: 100
+  start:
+  - if_before: 2021-03-24 14:15:00+00:00
+    if_has_fewer_sessions_than: 1
+    if_has_role:
+    - student
+    - ta
+    - instructor
+    may_list_existing_sessions: true
+    may_start_new_session: true
+  - may_list_existing_sessions: true
+    may_start_new_session: false
+title: Pregunta 1
